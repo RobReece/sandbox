@@ -1,0 +1,80 @@
+#
+# Common gitignore elements for VIM
+# https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+#
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# persistent undo 
+*.un~
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+#
+# Common gitignore elements for Java
+# https://github.com/github/gitignore/blob/master/Java.gitignore
+#
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#
+# Common gitignore elements for Gradle
+# https://github.com/github/gitignore/blob/master/Gradle.gitignore
+#
+.gradle
+build/
+# Ignore Gradle GUI config
+gradle-app.setting
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+# Cache of project
+.gradletasknamecache
+
+#
+# Common gitignore elements for Eclipse
+# https://raw.githubusercontent.com/github/gitignore/master/Global/Eclipse.gitignore
+#
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+# Eclipse Core
+.project
+# External tool builders
+.externalToolBuilders/
+# Locally stored "Eclipse launch configurations"
+*.launch
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+# Java annotation processor (APT)
+.factorypath
+# PDT-specific (PHP Development Tools)
+.buildpath
+# sbteclipse plugin
+.target
+# Tern plugin
+.tern-project
+# TeXlipse plugin
+.texlipse
+# STS (Spring Tool Suite)
+.springBeans
+# Code Recommenders
+.recommenders/
