@@ -11,7 +11,7 @@ public class JUnit3SuperClassInitializerForJUnit4 {
 	
 	private TestName testName = new TestName();
 	
-	private TestRule beforeAndAfter_EachMethod_ForJUnit3SuperClass = new BeforeAndAfter() {
+	private TestRule junit3Bridge = new BeforeAndAfter() {
 		@Override
 		public void before() {
 			superClassByComposition = new JUnit3SuperClass(testName.getMethodName());
@@ -25,5 +25,5 @@ public class JUnit3SuperClassInitializerForJUnit4 {
 	};
 	
 	@Rule
-	public RuleChain superClassInitializer = RuleChain.outerRule(testName).around(beforeAndAfter_EachMethod_ForJUnit3SuperClass);
+	public RuleChain superClassInitializer = RuleChain.outerRule(testName).around(junit3Bridge);
 }
