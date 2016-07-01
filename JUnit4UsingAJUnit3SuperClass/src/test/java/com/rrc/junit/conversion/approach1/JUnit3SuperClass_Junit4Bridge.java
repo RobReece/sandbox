@@ -6,12 +6,12 @@ import org.junit.rules.TestRule;
 
 import com.rrc.junit.utils.BeforeAndAfter;
 
-public class JUnit3SuperClassInitializerForJUnit4 {
+public class JUnit3SuperClass_Junit4Bridge {
 	JUnit3SuperClass superClassByComposition;
 	
 	private TestName testName = new TestName();
 	
-	private TestRule junit3Bridge = new BeforeAndAfter() {
+	private TestRule callJunit3Initializers = new BeforeAndAfter() {
 		@Override
 		public void before() {
 			superClassByComposition = new JUnit3SuperClass(testName.getMethodName());
@@ -25,7 +25,7 @@ public class JUnit3SuperClassInitializerForJUnit4 {
 	};
 	
 	@Rule
-	public RuleChain superClassInitializer = RuleChain.outerRule(testName).around(junit3Bridge);
+	public RuleChain superClassInitializer = RuleChain.outerRule(testName).around(callJunit3Initializers);
 	
 	// pass through method to use composed object, allows existing test classes to remain unchanged
 	public void failWithJUnit3Assert() {
