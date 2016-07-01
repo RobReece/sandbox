@@ -1,6 +1,4 @@
 package com.rrc.junit.conversion.approach1;
-import java.util.Date;
-
 import junit.framework.TestCase;
 
 public class JUnit3SuperClass extends TestCase {
@@ -33,5 +31,9 @@ public class JUnit3SuperClass extends TestCase {
 	
 	public void tearDown() {
 		System.out.println("Tearing it down");
+	}
+	
+	public void failWithJUnit3Assert() {
+		assertNotNull("always fails.", null);
 	}
 }

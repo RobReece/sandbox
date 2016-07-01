@@ -14,6 +14,10 @@ public class JUnit3TestClass extends JUnit3SuperClass {
 		theTest();
 	}
 	
+	public void testAlwaysFail() {
+		failWithJUnit3Assert();
+	}
+	
 	private void theTest() {
 		System.out.println(ctorState);
 		System.out.println(setupState);

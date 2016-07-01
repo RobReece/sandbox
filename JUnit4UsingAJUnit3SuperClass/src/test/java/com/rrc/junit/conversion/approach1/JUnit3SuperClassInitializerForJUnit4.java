@@ -26,4 +26,10 @@ public class JUnit3SuperClassInitializerForJUnit4 {
 	
 	@Rule
 	public RuleChain superClassInitializer = RuleChain.outerRule(testName).around(junit3Bridge);
+	
+	// pass through method to use composed object, allows existing test classes to remain unchanged
+	public void failWithJUnit3Assert() {
+		superClassByComposition.failWithJUnit3Assert();
+	}
+	
 }
