@@ -5,6 +5,8 @@ public class JUnit3SuperClass extends TestCase {
 
 	String ctorState;
 	String setupState;
+	String username;
+	String password;
 	
 	static String somethingStatic;
 	
@@ -15,6 +17,11 @@ public class JUnit3SuperClass extends TestCase {
 	public JUnit3SuperClass(String name) {
 		super(name);
 		init();
+	}
+	
+	public JUnit3SuperClass(String username, String password) {
+		this.username = username;
+		this.password = password;
 	}
 	
 	public void init() {
